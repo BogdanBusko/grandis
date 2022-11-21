@@ -1,6 +1,4 @@
-<%= simple_form_for @user, url: session_registrations_path do |f| %>
-  <%= f.input :email %>
-  <%= f.input :password %>
-  <%= f.input :password_confirmation %>
-  <%= f.submit %>
+<h1>Sign Up</h1>
+<%= turbo_frame_tag 'sign_up_form' do %>
+  <%= render 'registrations/form', user: @user %>
 <% end %>

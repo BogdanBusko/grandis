@@ -10,7 +10,7 @@
 #
 FactoryBot.define do
   factory :user do
-    email { FactoryBot::Internet.email }
+    email { Faker::Internet.email }
     password { SecureRandom.hex(10) }
   end
 end
