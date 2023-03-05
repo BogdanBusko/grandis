@@ -1,9 +1,0 @@
-<h1>Login</h1>
-<%= turbo_frame_tag 'login_error' %>
-<%= turbo_frame_tag 'login_form' do %>
-  <%= simple_form_for @user, url: sessions_path do |f| %>
-    <%= f.input :email %>
-    <%= f.input :password %>
-    <%= f.submit 'Login' %>
-  <% end %>
-<% end %>

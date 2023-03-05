@@ -1,0 +1,28 @@
+<% posts.each do |post| %>
+  <%= turbo_frame_tag(dom_id(post)) do %>
+    <div class="mb-4">
+      <div class="row">
+        <div class="col-4">
+          <% if post.image.present? %>
+            <%= image_tag(post.image_url, class: 'img-fluid') %>
+          <% end %>
+        </div>
+        <div class="col-8">
+          <h2><%= link_to post.title, account_post_path(post) %></h2>
+          <p>
+            <%= post.body.truncate(255) %>
+          </p>
+          <div>
+            <%= l(post.created_at, format: :short) %>
+          </div>
+
+          <div>
+            <%= link_to 'Edit post', edit_account_post_path(post) %>
+            &nbsp;|&nbsp;
+            <%= link_to 'Destroy post', account_post_path(post, page: params[:page]), data: { "turbo-method" => :delete } %>
+          </div>
+        </div>
+      </div>
+    </div>
+  <% end %>
+<% end %>

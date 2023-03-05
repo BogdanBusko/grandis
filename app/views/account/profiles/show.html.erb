@@ -1,0 +1,20 @@
+<div class="mt-4">
+  <h1>Profile</h1>
+  <ul>
+    <li>Email: <%= current_user.email %></li>
+  </ul>
+
+  <%= link_to 'Edit profile', edit_account_profile_path %>
+  <%= link_to 'Add post', new_account_post_path %>
+
+  <h2 class="mt-4">Recent Posts</h2>
+  <%= turbo_frame_tag 'recent_posts' do %>
+    <%= render '/account/shared/posts', posts: @posts %>
+  <% end %>
+
+  <% if current_user.posts.count > 3 %>
+    <div class="mt-3">
+      <%= link_to 'View all posts', account_posts_path %>
+    </div>
+  <% end %>
+</div>

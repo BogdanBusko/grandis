@@ -1,8 +1,4 @@
 class ApplicationService
-  def initialize
-    raise ImplementMe
-  end
-
   def call
     raise ImplementMe
   end

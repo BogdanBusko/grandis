@@ -5,8 +5,10 @@ require_relative '../config/environment'
 abort("The Rails environment is running in production mode!") if Rails.env.production?
 require 'rspec/rails'
 
-Dir[Rails.root.join('spec', 'config', '*.rb')].each do |file|
-  require file
+['spec/config/**/*.rb', 'spec/support/**/*.rb'].each do |path|
+  Dir[Rails.root.join(path)].each do |file|
+    require file
+  end
 end
 
 begin
@@ -23,4 +25,6 @@ RSpec.configure do |config|
   config.infer_spec_type_from_file_location!
 
   config.filter_rails_from_backtrace!
+
+  config.extend LoginHelper
 end

@@ -20,7 +20,7 @@ gem 'simple_form'
 gem 'sprockets-rails'
 gem 'stimulus-rails'
 gem 'turbo-rails'
-gem 'tzinfo-data', platforms: %i[ mingw mswin x64_mingw jruby ]
+gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
 
 group :development, :test do
   gem 'annotate'
@@ -38,5 +38,12 @@ group :test do
   gem 'rspec-rails'
   gem 'selenium-webdriver'
   gem 'shoulda-matchers', '~> 5.0'
+  gem 'simplecov', require: false
   gem 'webdrivers'
 end
+
+gem 'bootstrap', '~> 5.2.3'
+gem 'graphiql-rails'
+gem 'graphql'
+gem 'pagy', '~> 6.0'
+gem 'shrine'

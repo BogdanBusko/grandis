@@ -1,0 +1,11 @@
+<h1 class="mt-4 mb-2">My Posts</h1>
+
+<%= link_to 'Add post', new_account_post_path %>
+
+<% if @posts.any? %>
+  <%= turbo_frame_tag 'my_posts' do %>
+    <%= render 'account/posts/posts', posts: @posts, pagy: @pagy %>
+  <% end %>
+<% else %>
+  <h3>You don't have posts</h3>
+<% end %>

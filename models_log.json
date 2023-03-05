@@ -1,0 +1,44 @@
+[
+  {
+    "model": "SmartTermsCsv",
+    "action": "create",
+    "attributes": {
+      "id": "2c273ea4-6b3d-11ed-8780-277b0bc75d87",
+      "file": null,
+      "created_at": "2022-11-23 09:43:19 -0500",
+      "updated_at": "2022-11-23 09:43:19 -0500",
+      "file_data": {
+        "id": "c2fb854f50120ec5f0426a594b46b704/smart_terms_valid.csv",
+        "storage": "smart_terms_csv_upload_cache",
+        "metadata": {
+          "filename": "smart_terms_valid.csv",
+          "size": 278,
+          "mime_type": "text/csv"
+        }
+      },
+      "errored_count": 0,
+      "status": null
+    }
+  },
+  {
+    "model": "SmartTermsCsv",
+    "action": "update",
+    "attributes": {
+      "id": "2c273ea4-6b3d-11ed-8780-277b0bc75d87",
+      "file": null,
+      "created_at": "2022-11-23 09:43:19 -0500",
+      "updated_at": "2022-11-23 09:43:19 -0500",
+      "file_data": {
+        "id": "c2fb854f50120ec5f0426a594b46b704/smart_terms_valid.csv",
+        "storage": "smart_terms_csv_upload_cache",
+        "metadata": {
+          "filename": "smart_terms_valid.csv",
+          "size": 278,
+          "mime_type": "text/csv"
+        }
+      },
+      "errored_count": 0,
+      "status": "enqueued"
+    }
+  }
+]
